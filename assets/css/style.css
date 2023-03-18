@@ -155,3 +155,63 @@ Header
     font-size: 1rem;
     padding: .75rem 1.25rem;
 }
+/*----------------------------------
+Content divider
+------------------------------------*/
+.content-divider{
+    height: 0.8rem;
+    background: linear-gradient(to right, var(--clr-primary-dark), var(--clr-primary-ligth), var(--clr-primary-dark));
+}
+
+/*----------------------------------
+Skills section
+------------------------------------*/
+.skills{
+    background: var(--clr-grey-10);
+}
+.skill{
+    padding: 2.5rem 0;
+    text-align: center;
+    transition: var(--transition);
+}
+.skill-icon{
+    /*Recordar que los span son elementos en linea, los mismos no le afectan los valores de la propiedad margin*/
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+    color: var(--clr-primary-dark);
+    transition: var(--transition);
+}
+.skill-p{
+    color: var(--clr-grey-5);
+    max-width: 17rem;
+    margin: 0 auto;
+}
+/*Agregamos transición al bloque de skills*/
+.skill:hover{
+    background: var(--clr-white);
+    box-shadow: 0 2px var(--clr-primary);
+}
+/*Agregamos transición al icono*/
+.skill:hover .skill-icon{
+    transform: translateY(-5px);
+}
+/* SKILLS MEDIA QUERIES */
+@media screen and (min-width:576px){
+    .skill{
+        float: left;
+        width: 50%;
+    }
+}
+@media screen and (min-width:1200px){
+    .skill{
+        float: left;
+        width: 25%;
+    }
+}
+/*----Recordar que al utilizar la prop float, estamos sacando los elementos de su flujo normal y el resto de alementos los envolverá.Para solucionar esto usamos clearfix----*/
+.clearfix::after, .clearfix::before{
+    content: "";
+    clear: both;
+    display: table; 
+}
