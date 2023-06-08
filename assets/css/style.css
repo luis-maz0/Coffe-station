@@ -209,7 +209,7 @@ Skills section
         width: 25%;
     }
 }
-/*----Recordar que al utilizar la prop float, estamos sacando los elementos de su flujo normal y el resto de alementos los envolverá.Para solucionar esto usamos clearfix----*/
+/*----Recordar que al utilizar la prop. float, estamos sacando los elementos de su flujo normal y el resto de alementos los envolverá.Para solucionar esto usamos clearfix----*/
 .clearfix::after, .clearfix::before{
     content: "";
     clear: both;
@@ -263,7 +263,15 @@ About section
 }
 
 /* Agregar dos columnas en section de about*/
-/*
+
 @media screen and (min-width:992px) {
-    .abou
-} */
+    .about-info,.about-img{
+        float: right;
+        width: 50%;
+    }
+} 
+.nada{
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+}
